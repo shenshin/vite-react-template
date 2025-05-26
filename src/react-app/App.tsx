@@ -15,7 +15,7 @@ function App() {
     <>
       <div>
         <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+          <img src={viteLogo} className="h-24 p-6 logo" alt="Vite logo" />
         </a>
         <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
@@ -32,35 +32,33 @@ function App() {
         </a>
       </div>
       <h1>Vite + React + Hono + Cloudflare</h1>
-      <div className="card">
+      <div className="p-8">
         <button
           onClick={() => setCount((count) => count + 1)}
-          aria-label="increment"
-        >
+          aria-label="increment">
           count is {count}
         </button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
-      <div className="card">
+      <div className="p-8">
         <button
           onClick={() => {
-            fetch("/api/")
+            fetch('/api/')
               .then((res) => res.json() as Promise<{ name: string }>)
-              .then((data) => setName(data.name));
+              .then((data) => setName(data.name))
           }}
-          aria-label="get name"
-        >
+          aria-label="get name">
           Name from API is: {name}
         </button>
         <p>
           Edit <code>worker/index.ts</code> to change the name
         </p>
       </div>
-      <p className="read-the-docs">Click on the logos to learn more</p>
+      <p className="text-[#888]">Click on the logos to learn more</p>
     </>
-  );
+  )
 }
 
 export default App;
