@@ -1,36 +1,12 @@
-// src/App.tsx
-
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import cloudflareLogo from "./assets/Cloudflare_Logo.svg";
-import honoLogo from "./assets/hono.svg";
-import "./App.css";
+import { useState } from 'react'
+import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0);
-  const [name, setName] = useState("unknown");
+  const [count, setCount] = useState(0)
+  const [name, setName] = useState('unknown')
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="h-24 p-6 logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-        <a href="https://hono.dev/" target="_blank">
-          <img src={honoLogo} className="logo cloudflare" alt="Hono logo" />
-        </a>
-        <a href="https://workers.cloudflare.com/" target="_blank">
-          <img
-            src={cloudflareLogo}
-            className="logo cloudflare"
-            alt="Cloudflare logo"
-          />
-        </a>
-      </div>
       <h1>Vite + React + Hono + Cloudflare</h1>
       <div className="p-8">
         <button
@@ -61,4 +37,4 @@ function App() {
   )
 }
 
-export default App;
+export default App
